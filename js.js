@@ -17,8 +17,33 @@ function pegarValores(id1, id2) {
     }
     return true;
   }
+
    function potencia() {
     const { v1, v2 } = pegarValores('pot1', 'pot2');
     if (!valoresValidos(v1, v2, 'resultadoPot')) return;
     mostrarResultado('resultadoPot', `Resultado: <span>${Math.pow(v1, v2)}</span>`);
+
+
+
+    function somar() {
+    const { v1, v2 } = pegarValores('soma1', 'soma2');
+    if (!valoresValidos(v1, v2, 'resultadoSoma')) return;
+    mostrarResultado('resultadoSoma', `Resultado: <span>${v1 + v2}</span>`);
   }
+   function dividir() {
+    const { v1, v2 } = pegarValores('div1', 'div2');
+    if (!valoresValidos(v1, v2, 'resultadoDiv')) return;
+    if (v2 === 0) {
+      mostrarResultado('resultadoDiv', 'Não é possível dividir por zero.', true);
+      return;
+    }
+    mostrarResultado('resultadoDiv', `Resultado: <span>${(v1 / v2).toFixed(4)}</span>`);
+  }
+
+    function subtrair() {
+    const { v1, v2 } = pegarValores('sub1', 'sub2');
+    if (!valoresValidos(v1, v2, 'resultadoSub')) return;
+    mostrarResultado('resultadoSub', `Resultado: <span>${v1 - v2}</span>`);
+  }
+
+
