@@ -33,3 +33,10 @@ function pegarValores(id1, id2) {
     }
     mostrarResultado('resultadoDiv', `Resultado: <span>${(v1 / v2).toFixed(4)}</span>`);
   }
+
+    function subtrair() {
+    const { v1, v2 } = pegarValores('sub1', 'sub2');
+    if (!valoresValidos(v1, v2, 'resultadoSub')) return;
+    mostrarResultado('resultadoSub', `Resultado: <span>${v1 - v2}</span>`);
+  }
+
