@@ -17,3 +17,9 @@ function pegarValores(id1, id2) {
     }
     return true;
   }
+
+    function somar() {
+    const { v1, v2 } = pegarValores('soma1', 'soma2');
+    if (!valoresValidos(v1, v2, 'resultadoSoma')) return;
+    mostrarResultado('resultadoSoma', `Resultado: <span>${v1 + v2}</span>`);
+  }
