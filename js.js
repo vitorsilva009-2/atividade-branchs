@@ -18,8 +18,18 @@ function pegarValores(id1, id2) {
     return true;
   }
 
+
     function somar() {
     const { v1, v2 } = pegarValores('soma1', 'soma2');
     if (!valoresValidos(v1, v2, 'resultadoSoma')) return;
     mostrarResultado('resultadoSoma', `Resultado: <span>${v1 + v2}</span>`);
+  }
+   function dividir() {
+    const { v1, v2 } = pegarValores('div1', 'div2');
+    if (!valoresValidos(v1, v2, 'resultadoDiv')) return;
+    if (v2 === 0) {
+      mostrarResultado('resultadoDiv', 'Não é possível dividir por zero.', true);
+      return;
+    }
+    mostrarResultado('resultadoDiv', `Resultado: <span>${(v1 / v2).toFixed(4)}</span>`);
   }
