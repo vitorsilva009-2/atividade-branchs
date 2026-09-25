@@ -22,7 +22,7 @@ function pegarValores(id1, id2) {
     const { v1, v2 } = pegarValores('pot1', 'pot2');
     if (!valoresValidos(v1, v2, 'resultadoPot')) return;
     mostrarResultado('resultadoPot', `Resultado: <span>${Math.pow(v1, v2)}</span>`);
-
+   }
 
 
     function somar() {
