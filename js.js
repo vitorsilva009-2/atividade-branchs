@@ -17,3 +17,8 @@ function pegarValores(id1, id2) {
     }
     return true;
   }
+  function multiplicar() {
+    const { v1, v2 } = pegarValores('mult1', 'mult2');
+    if (!valoresValidos(v1, v2, 'resultadoMult')) return;
+    mostrarResultado('resultadoMult', `Resultado: <span>${v1 * v2}</span>`);
+  }
