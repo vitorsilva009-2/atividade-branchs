@@ -18,12 +18,18 @@ function pegarValores(id1, id2) {
     return true;
   }
 
+  function multiplicar() {
+    const { v1, v2 } = pegarValores('mult1', 'mult2');
+    if (!valoresValidos(v1, v2, 'resultadoMult')) return;
+    mostrarResultado('resultadoMult', `Resultado: <span>${v1 * v2}</span>`);
+
+  }
    function potencia() {
     const { v1, v2 } = pegarValores('pot1', 'pot2');
     if (!valoresValidos(v1, v2, 'resultadoPot')) return;
     mostrarResultado('resultadoPot', `Resultado: <span>${Math.pow(v1, v2)}</span>`);
 
-
+   }
 
     function somar() {
     const { v1, v2 } = pegarValores('soma1', 'soma2');
@@ -45,5 +51,4 @@ function pegarValores(id1, id2) {
     if (!valoresValidos(v1, v2, 'resultadoSub')) return;
     mostrarResultado('resultadoSub', `Resultado: <span>${v1 - v2}</span>`);
   }
-
 
